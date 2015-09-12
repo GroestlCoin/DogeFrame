@@ -1,8 +1,8 @@
 <?php
 /*
-EasyDogecoin-PHP
-A simple class for making calls to Dogecoin's API using PHP.
-https://github.com/aceat64/EasyDogecoin-PHP
+EasyGroestlcoin-PHP
+A simple class for making calls to groestlcoin's API using PHP.
+https://github.com/aceat64/EasyGroestlcoin-PHP
 ====================
 The MIT License (MIT)
 Copyright (c) 2013 Andrew LeCody
@@ -22,28 +22,28 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ====================
-// Initialize Dogecoin connection/object
-$dogecoin = new Dogecoin('username','password');
+// Initialize Groestlcoin connection/object
+$groestlcoin = new Groestlcoin('username','password');
 // Optionally, you can specify a host, port and protocol (HTTP and HTTPS).
-$dogecoin = new Dogecoin('username','password','host','port','http');
+$groestlcoin = new Groestlcoin('username','password','host','port','http');
 // Defaults are:
 // host = localhost
-// port = 8332
+// port = 1441
 // proto = http
-// Make calls to dogecoind as methods for your object. Responses are returned as an array.
+// Make calls to groestlcoind as methods for your object. Responses are returned as an array.
 // Examples:
-$dogecoin->getinfo();
-$dogecoin->getrawtransaction('0e3e2357e806b6cdb1f70b54c3a3a17b6714ee1f0e68bebb44a74b1efd512098',1);
-$dogecoin->getblock('000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f');
+$groestlcoin->getinfo();
+$groestlcoin->getrawtransaction('dc61e4241098e9077fa6eca38871822291b94bb81733fe5a65519465b8be980b',756476);
+$groestlcoin->getblock('000000000d36a8c83bf9ba044e83073123bb7dc632708988b1e7601e6ecb84de');
 // The full response (not usually needed) is stored in $this->response while the raw JSON is stored in $this->raw_response
 // When a call fails for any reason, it will return false and put the error message in $this->error
 // Example:
-echo $dogecoin->error;
+echo $groestlcoin->error;
 // The HTTP status code can be found in $this->status and will either be a valid HTTP status code or will be 0 if cURL was unable to connect.
 // Example:
-echo $dogecoin->status;
+echo $groestlcoin->status;
 */
-class Dogecoin {
+class Groestlcoin {
 	// Configuration options
 	public $username;
 	public $password;
@@ -65,7 +65,7 @@ class Dogecoin {
 	* @param string $proto
 	* @param string $url
 	*/
-	function __construct($username, $password, $host = 'localhost', $port = 22555, $proto = 'http', $url = null) {
+	function __construct($username, $password, $host = 'localhost', $port = 1441, $proto = 'http', $url = null) {
 		$this->username = $username;
 		$this->password = $password;
 		$this->proto = $proto;
