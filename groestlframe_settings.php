@@ -3,8 +3,8 @@
 	$this->settings = [
 		//wallet connection data (RPC)
 		"rpc_ip" 			=> "localhost",		
-		"rpc_port"			=> 22555,
-		"rpc_user" 			=> "dogecoinrpc",
+		"rpc_port"			=> 1441,
+		"rpc_user" 			=> "groestlcoinrpc",
 		"rpc_password" 		=> "password",
 		"rpc_protocol"		=> "https",			//if, for some reason, you can't use https to connect to the wallet, enter "http" here
 		
@@ -18,6 +18,6 @@
 		"db_userIdColumn" 	=> "user_id", 		//name of the column storing unique user ID (used for fetching users address and acount data)
 		
 		//general settings
-		"minconf" 			=> 3,				//minimum confirmations required to count a deposit as valid
+		"minconf" 			=> 6,				//minimum confirmations required to count a deposit as valid
 	];
 ?>
