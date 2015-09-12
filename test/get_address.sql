@@ -1,8 +1,8 @@
 <?php
 
-require "dogeframe.php";
+require "groestlframe.php";
 
-$dogeframe = new Dogeframe();
-$balance = $dogeframe->depositAddress(1);
+$groestlframe = new Groestlframe();
+$balance = $groestlframe->depositAddress(1);
 echo $balance . "\n";
 ?>
