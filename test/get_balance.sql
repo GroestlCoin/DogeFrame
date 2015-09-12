@@ -1,8 +1,8 @@
 <?php
 
-require "dogeframe.php";
+require "groestlframe.php";
 
-$dogeframe = new Dogeframe();
-$balance = $dogeframe->getBalance(1);
+$groestlframe = new Groestlframe();
+$balance = $groestlframe->getBalance(1);
 echo $balance . "\n";
 ?>
