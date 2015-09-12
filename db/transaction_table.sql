@@ -1,4 +1,4 @@
-CREATE TABLE `doge_transactions` (
+CREATE TABLE `groestl_transactions` (
 `transaction_id` int(11) NOT NULL AUTO_INCREMENT,
 `send_user` int(11) DEFAULT '0',
 `receive_user` int(11) DEFAULT '0',
